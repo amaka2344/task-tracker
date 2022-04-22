@@ -1,5 +1,5 @@
 //use state inside a function we use hook (USESTATE) 
-import { useState } from "react"
+import { useState } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks';
 
@@ -11,19 +11,19 @@ function App() {
         id: 1,
         text: 'Doctors Appointment',
         day: 'Feb 5th at 2:30pm',
-        remainder: true,
+        reminder: true,
       },
       {
         id: 2,
         text: 'Meeting at school',
         day: 'Feb 6th at 1:30pm',
-        remainder: true,
+        reminder: true,
       },
       {
         id: 3,
         text: 'Food Shopping',
         day: 'Feb 8th at 2:30pm',
-        remainder: false,
+        reminder: false,
       },
     ]
   )
@@ -38,11 +38,12 @@ function App() {
     setTasks(
       tasks.map((task) => 
       task.id === id ? { ...task, reminder:
-      !task.remainder } : task
+      !task.reminder } : task
       )
     )
+   
   }
-
+ 
 
   //
   return (
