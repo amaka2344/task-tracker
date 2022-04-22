@@ -1,16 +1,12 @@
-
+import Task from './Task'
 
 //creating list in react by using map() array method
-const Tasks = ({tasks}) => {
-
- 
-
-
+const Tasks = ({tasks, onDelete}) => {
   return (
     <>
-      {tasks.map((tasks) => 
-      (<h3 key={tasks.id}>{tasks.text}</h3>))
-      }
+      {tasks.map((task) => (
+      <Task key={task.id} task = {task} onDelete={onDelete}/>
+      ))}
     </>
   )
 }
